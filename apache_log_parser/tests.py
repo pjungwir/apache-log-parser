@@ -72,7 +72,7 @@ class ApacheLogParserTestCase(unittest.TestCase):
             'remote_user': '-',
             'server_name': 'T1',
             'request_http_ver': '1.1',
-            'request_header_user_agent': '',
+            'request_header_user_agent': 'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.76 Safari/537.36',
             'request_first_line': 'GET /content_images/3/American-University-in-Cairo-AUC.jpeg.jpg HTTP/1.1',
             'remote_logname': '-',
             'request_method': 'GET',
