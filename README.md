@@ -97,7 +97,7 @@ Supported values
     '%\{[^\}]+?\}o'  #	The contents of Foobar: header line(s) in the reply.
     '%\{[^\}]+?\}p'  #	The canonical port of the server serving the request or the server's actual port or the client's actual port. Valid formats are canonical, local, or remote.
     '%\{[^\}]+?\}P'  #	The process ID or thread id of the child that serviced the request. Valid formats are pid, tid, and hextid. hextid requires APR 1.2.0 or higher.
-    '%\{[^\}]+?\}t'  #	The time, in the form given by format, which should be in strftime(3) format. (potentially localized)
+    '%\{[^\}]+?\}t'  #	The time, uninterpreted, named using the contents of the braces. Actually you can use this to capture arbitrary values (e.g. X-Forwarded-For).
     '%\{[^\}]+?\}x'  # Extension value, e.g. mod_ssl protocol and cipher
 ```
 
