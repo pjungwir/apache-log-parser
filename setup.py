@@ -12,6 +12,9 @@ setup(name="apache-log-parser",
       install_requires = [
         'user-agents',
       ],
+      entry_points = {
+          'console_scripts': ['apache_log_parser=apache_log_parser.cli:main'],
+      },
       license = 'GPLv3+',
       description = "Parse lines from an apache log file",
       test_suite='apache_log_parser.tests',
