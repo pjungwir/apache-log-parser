@@ -22,6 +22,7 @@ def main():
         description="Parse apache log files")
     argparser.add_argument('-p', '--pattern')
     argparser.add_argument('-i', '--ignore-errors', action='store_true')
+    argparser.add_argument('-D', '--debug', action='store_true')
     argparser.add_argument('filename')
 
     args = argparser.parse_args()
@@ -29,6 +30,8 @@ def main():
     pattern = interpret_pattern(args.pattern or 'combined')
     parser = apache_log_parser.Parser(pattern)
     writer = csv.DictWriter(sys.stdout, fieldnames=parser.names)
+    if args.debug:
+        sys.stderr.write(f"{parser._log_line_regex_raw}\n")
     writer.writeheader()
     with open(args.filename, 'r') as logfile:
         for line in logfile:
