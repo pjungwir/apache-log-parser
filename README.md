@@ -26,10 +26,11 @@ Example
     {'pid': '6113',
      'remote_host': '127.0.0.1',
      'remote_logname': '-',
-     'remote_user': '',
+     'remote_user': '-',
      'request_first_line': 'GET / HTTP/1.1',
      'request_header_referer': 'https://example.com/',
-     'request_header_user_agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.2.18)',
+     'request_header_user_agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US; '
+                                  'rv:1.9.2.18)',
      'request_header_user_agent__browser__family': 'Other',
      'request_header_user_agent__browser__version_string': '',
      'request_header_user_agent__is_mobile': False,
